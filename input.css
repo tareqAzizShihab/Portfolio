@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-backG: #0a0a0a;
+  --color-ECA: #48494a;
+  --color-ECB: #262627;
+  --color-EBGC: #1d1d1d;
+}
+
+@layer components {
+  .cardGD {
+    @apply bg-radial-[at_25%_25%] from-ECA to-ECB;
+  }
+  .textGD {
+    @apply text-transparent bg-[linear-gradient(135deg,white_22%,#999_40%,white_70%,#999_90%)] bg-clip-text;
+  }
+  .h5 {
+    @apply text-[20px] lg:text-2xl font-medium;
+  }
+  .subHead {
+    @apply font-light lg:text-lg xl:text-xl opacity-60;
+  }
+}
