@@ -142,7 +142,7 @@
         <!--Main content of Home Page-->
         <main>
           <!--Wrapper of Main-->
-          <div class="mt-5 sm:grid sm:grid-cols-2 sm:grid-rows-2 sm:gap-4">
+          <div class="mt-5 sm:grid sm:grid-cols-2 sm:grid-rows-2 sm:gap-x-4">
             <!--Project Highlight div-->
             <div
               id="highlighted"
@@ -150,72 +150,112 @@
             >
               <!--Project Number main Wrapper/MIddle round of Project boxes-->
               <div
-                class="p-7 -mb-5 rounded-full outline-[0.1px] outline-offset-[35px] outline-[#242424] z-0 bg-linear-to-r from-0% from-[#242424] to-100% to-[#202020]"
+                class="p-7 -mb-5 rounded-full hover:scale-125 transition-all ease-in-out duration-500 outline-[0.1px] outline-offset-[35px] outline-[#242424] z-0 bg-linear-to-r from-0% from-[#242424] to-100% to-[#202020]"
               >
                 <!--Main box of project-->
                 <div
-                  class="h-[150px] w-[150px] rounded-full cardGD flex justify-center items-center"
+                  class="h-[150px] w-[150px] rounded-full cardGD hover:scale-110 transition-all ease-in-out duration-500"
                 >
+                  <a
+                    href="#"
+                    class="h-full w-full flex justify-center items-center"
+                  >
+                    <div class="flex flex-col items-center">
+                      <p class="subHead">See</p>
+                      <span
+                        class="text-2xl lg:text-4xl font-bold font-mono textGD"
+                        >Latest</span
+                      >
+                      <p class="subHead">Projects</p>
+                    </div></a
+                  >
                   <!--Project number Wrapper-->
-                  <div class="flex flex-col items-center">
-                    <span
-                      class="text-[48px] lg:text-[52px] font-bold font-mono -mb-3 textGD"
-                      >62</span
-                    >
-                    <p class="subHead">Projects</p>
-                  </div>
                 </div>
               </div>
               <!--Highlight project boxs text Wrapper-->
               <div class="*:text-center z-10 p-6">
-                <h5 class="h5">Projects made by me</h5>
-                <p class="subHead">I have made for learning purpose</p>
+                <h5 class="h5">Latest project made by me</h5>
+                <p class="subHead">I have made this for learning purpose</p>
               </div>
             </div>
-            <!--About Brief div-->
-            <div
-              id="briefAbout"
-              class="mt-5 sm:mt-0 rounded-xl overflow-hidden relative"
-            >
-              <div
-                class="w-full h-[30vh] bg-cover bg-center sm:h-full sm:w-full bg-[url(/asset/5_1293b607-09dd-42aa-8e34-62b10634eaa2.webp)]"
-              ></div>
-              <div
-                class="absolute bottom-7 left-1/2 transform -translate-x-1/2 *:text-center backdrop-blur-[4px] p-2 rounded-lg"
-              >
-                <h5 class="h5">About Me</h5>
-                <p class="subHead">I like to gossip</p>
+            <!--Skills Brief div-->
+            <div id="Skills" class="mt-5 sm:mt-0 rounded-xl bg-EBGC p-5">
+              <div class="flex flex-col gap-5">
+                <label class="flex items-center gap-3">
+                  <span class="h3">ReactJS</span>
+                  <progress
+                    value="60"
+                    max="100"
+                    class="[&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-bar]:p-[2px] [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-bar]:bg-[#999] [&::-webkit-progress-value]:bg-ECA"
+                  ></progress>
+                </label>
+                <label class="flex items-center gap-3">
+                  <span class="h3">JavaScript</span>
+                  <progress
+                    value="70"
+                    max="100"
+                    class="[&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-bar]:p-[2px] [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-bar]:bg-[#999] [&::-webkit-progress-value]:bg-ECA"
+                  ></progress>
+                </label>
+                <label class="flex items-center gap-3">
+                  <span class="h3">TailwindCSS</span>
+                  <progress
+                    value="50"
+                    max="100"
+                    class="[&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-bar]:p-[2px] [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-bar]:bg-[#999] [&::-webkit-progress-value]:bg-ECA"
+                  ></progress>
+                </label>
+                <label class="flex items-center gap-3">
+                  <span class="h3">CSS</span>
+                  <progress
+                    value="50"
+                    max="100"
+                    class="[&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-bar]:p-[2px] [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-bar]:bg-[#999] [&::-webkit-progress-value]:bg-ECA"
+                  ></progress>
+                </label>
+                <label class="flex items-center gap-3">
+                  <span class="h3">HTML</span>
+                  <progress
+                    value="80"
+                    max="100"
+                    class="[&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-bar]:p-[2px] [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-bar]:bg-[#999] [&::-webkit-progress-value]:bg-ECA"
+                  ></progress>
+                </label>
+              </div>
+              <div class="mt-6 text-center sm:col-span-3">
+                <h5 class="h5">Skills</h5>
+                <p class="subHead">Skills what i have.</p>
               </div>
             </div>
             <!--Overview/Staistics area-->
             <div
               id="statistic"
-              class="p-[22px] mt-5 bg-EBGC rounded-xl flex flex-col sm:col-span-2 sm:grid sm:grid-cols-3 sm:[grid-template-rows:2fr_1fr] md:place-items-center md:*:not-last:w-[230px] md:*:not-last:h-[160px] xl:px-[10vw] gap-5"
+              class="p-[22px] mt-5 bg-EBGC rounded-xl flex flex-col sm:col-span-2 sm:grid sm:grid-cols-3 sm:[grid-template-rows:2fr_1fr] md:place-items-center md:*:not-last:w-[230px] md:*:not-last:h-[160px] xl:px-[10vw] gap-5 sm:gap-y-0"
             >
               <div
-                class="cardGD rounded-[10px] border-r-[0.5px] border-b-[0.5px] p-8 pt-12 sm:pt-14 text-center leading-6"
+                class="cardGD rounded-[10px] border-r-[0.5px] border-b-[0.5px] p-8 pt-12 sm:pt-14 text-center leading-6 cardHover"
               >
                 <span
                   class="text-[48px] lg:text-[52px] font-bold font-mono textGD"
-                  >62</span
+                  >12</span
                 >
                 <p class="subHead">Projects</p>
               </div>
               <div
-                class="cardGD rounded-[10px] border-r-[0.5px] border-b-[0.5px] p-8 pt-12 sm:pt-14 sm:pb-5 text-center leading-6"
+                class="cardGD rounded-[10px] border-r-[0.5px] border-b-[0.5px] p-8 pt-12 sm:pt-14 sm:pb-5 text-center leading-6 cardHover"
               >
                 <span
                   class="text-[48px] lg:text-[52px] font-bold font-mono textGD"
-                  >5+</span
+                  >1+</span
                 >
                 <p class="subHead">Years Experience</p>
               </div>
               <div
-                class="cardGD rounded-[10px] border-r-[0.5px] border-b-[0.5px] p-8 pt-12 sm:pt-14 text-center leading-6"
+                class="cardGD rounded-[10px] border-r-[0.5px] border-b-[0.5px] p-8 pt-12 sm:pt-14 text-center leading-6 cardHover"
               >
                 <span
                   class="text-[48px] lg:text-[52px] font-bold font-mono textGD"
-                  >1995</span
+                  >2006</span
                 >
                 <p class="subHead">Born</p>
               </div>
@@ -230,15 +270,17 @@
         <section>
           <div class="bg-EBGC mt-5 rounded-xl p-5">
             <div
-              class="flex flex-col sm:flex-row sm:flex-wrap sm:justify-center gap-4 *:bg-ECB *:p-2 *:rounded-lg sm:*:max-w-[300px]"
+              class="flex flex-col sm:flex-row sm:flex-wrap sm:justify-center gap-6 sm:gap-10 lg:gap-12 *:bg-ECB *:p-2 *:rounded-lg sm:*:max-w-[300px]"
             >
               <!--Single Project-->
-              <div>
-                <img
-                  class="rounded-t-md h"
-                  src="./asset/image.png"
-                  alt="Projects Screen Short"
-                />
+              <div class="group overflow-hidden">
+                <a href="#"
+                  ><img
+                    class="rounded-t-md h-1/2 w-full group-hover:scale-110 transition-all duration-500 hover:cursor-pointer"
+                    src="./asset/image.png"
+                    alt="Projects Screen Short"
+                /></a>
+
                 <div class="mt-2">
                   <h3 class="h3">Weather Dashboard</h3>
                   <p class="subHead">
@@ -247,12 +289,14 @@
                   </p>
                 </div>
               </div>
-              <div>
-                <img
-                  class="rounded-t-md"
-                  src="./asset/image copy.png"
-                  alt="Projects Screen Short"
-                />
+              <div class="group overflow-hidden">
+                <a href="#"
+                  ><img
+                    class="rounded-t-md h-1/2 w-full group-hover:scale-110 transition-all duration-500 hover:cursor-pointer"
+                    src="./asset/image copy.png"
+                    alt="Projects Screen Short"
+                /></a>
+
                 <div class="mt-2">
                   <h3 class="h3">ToDo App</h3>
                   <p class="subHead">
@@ -261,12 +305,14 @@
                   </p>
                 </div>
               </div>
-              <div>
-                <img
-                  class="rounded-t-md"
-                  src="./asset/image copy 2.png"
-                  alt="Projects Screen Short"
-                />
+              <div class="group overflow-hidden">
+                <a href="#"
+                  ><img
+                    class="rounded-t-md h-1/2 w-full group-hover:scale-110 transition-all duration-500 hover:cursor-pointer"
+                    src="./asset/image copy 2.png"
+                    alt="Projects Screen Short"
+                /></a>
+
                 <div class="mt-2">
                   <h3 class="h3">Expense Tracker</h3>
                   <p class="subHead">
@@ -275,12 +321,14 @@
                   </p>
                 </div>
               </div>
-              <div>
-                <img
-                  class="rounded-t-md"
-                  src="./asset/image copy 3.png"
-                  alt="Projects Screen Short"
-                />
+              <div class="group overflow-hidden">
+                <a href=""
+                  ><img
+                    class="rounded-t-md h-1/2 w-full group-hover:scale-110 transition-all duration-500 hover:cursor-pointer"
+                    src="./asset/image copy 3.png"
+                    alt="Projects Screen Short"
+                /></a>
+
                 <div class="mt-2">
                   <h3 class="h3">Projetify</h3>
                   <p class="subHead">

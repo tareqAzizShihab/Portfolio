@@ -23,4 +23,7 @@
   .subHead {
     @apply font-light lg:text-lg xl:text-xl opacity-60;
   }
+  .cardHover {
+    @apply hover:scale-105 transition-all duration-500 hover:shadow-md hover:shadow-[#252525];
+  }
 }
