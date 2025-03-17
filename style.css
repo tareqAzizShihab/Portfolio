@@ -6,6 +6,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-amber-200: oklch(0.924 0.12 95.746);
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-lg: 1.125rem;
@@ -261,6 +262,9 @@
   .inline-flex {
     display: inline-flex;
   }
+  .table {
+    display: table;
+  }
   .size-7 {
     width: calc(var(--spacing) * 7);
     height: calc(var(--spacing) * 7);
@@ -284,6 +288,12 @@
   .h-\[50px\] {
     height: 50px;
   }
+  .h-\[100vh\] {
+    height: 100vh;
+  }
+  .h-\[110vh\] {
+    height: 110vh;
+  }
   .h-\[150px\] {
     height: 150px;
   }
@@ -302,8 +312,17 @@
   .w-full {
     width: 100%;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
+  }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
   }
   .grid-rows-3 {
     grid-template-rows: repeat(3, minmax(0, 1fr));
@@ -313,6 +332,9 @@
   }
   .flex-row {
     flex-direction: row;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
   }
   .items-center {
     align-items: center;
@@ -365,6 +387,10 @@
   .rounded-t-md {
     border-top-left-radius: var(--radius-md);
     border-top-right-radius: var(--radius-md);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
   .border-\[0\.5px\] {
     border-style: var(--tw-border-style);
@@ -492,6 +518,13 @@
   .text-white {
     color: var(--color-white);
   }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
   .outline-\[0\.1px\] {
     outline-style: var(--tw-outline-style);
     outline-width: 0.1px;
@@ -533,9 +566,34 @@
       display: flex;
     }
   }
+  .\*\:inline-flex {
+    :is(& > *) {
+      display: inline-flex;
+    }
+  }
+  .\*\:h-full {
+    :is(& > *) {
+      height: 100%;
+    }
+  }
+  .\*\:w-full {
+    :is(& > *) {
+      width: 100%;
+    }
+  }
+  .\*\:items-center {
+    :is(& > *) {
+      align-items: center;
+    }
+  }
   .\*\:gap-1\.5 {
     :is(& > *) {
       gap: calc(var(--spacing) * 1.5);
+    }
+  }
+  .\*\:gap-2 {
+    :is(& > *) {
+      gap: calc(var(--spacing) * 2);
     }
   }
   .\*\:rounded-lg {
@@ -546,6 +604,11 @@
   .\*\:bg-ECB {
     :is(& > *) {
       background-color: var(--color-ECB);
+    }
+  }
+  .\*\:bg-amber-200 {
+    :is(& > *) {
+      background-color: var(--color-amber-200);
     }
   }
   .\*\:p-2 {
@@ -751,6 +814,13 @@
       }
     }
   }
+  .sm\:\*\:text-center {
+    @media (width >= 40rem) {
+      :is(& > *) {
+        text-align: center;
+      }
+    }
+  }
   .md\:place-items-center {
     @media (width >= 48rem) {
       place-items: center;
@@ -889,6 +959,13 @@
       font-size: 52px;
     }
   }
+  .lg\:\*\:text-center {
+    @media (width >= 64rem) {
+      :is(& > *) {
+        text-align: center;
+      }
+    }
+  }
   .xl\:px-\[10vw\] {
     @media (width >= 80rem) {
       padding-inline: 10vw;
@@ -918,6 +995,14 @@
     &::-webkit-progress-value {
       background-color: var(--color-ECA);
     }
+  }
+}
+@layer utilities {
+  .selectedNav {
+    box-shadow: 5px 0px 10px -5px inset #a8a8a8;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: #48494a;
   }
 }
 @layer components {

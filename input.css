@@ -7,6 +7,15 @@
   --color-EBGC: #1d1d1d;
 }
 
+@layer utilities {
+  .selectedNav {
+    box-shadow: 5px 0px 10px -5px inset #a8a8a8;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: #48494a;
+  }
+}
+
 @layer components {
   .cardGD {
     @apply bg-radial-[at_25%_25%] from-ECA to-ECB;
